@@ -1,5 +1,5 @@
 ## Introduction
-Within this directory you can find example code for figures and stats that might come in handy for simple coastal ecology projects.
+Within this directory you can find example code for figures and stats that might come in handy for undergraduate coastal ecology projects.
 
 There is an "example" folder with different figure examples that have been created using dummy data.
 
