@@ -1,6 +1,6 @@
 ### ---- R plot examples for UC trip 2023 ---- ###
 
-### Example 1 - simple scatterplot ###
+### Example 1 - simple scatter plot ###
 
 ## Create an example dataset
 df <- data.frame(x = c(1, 2, 3, 4, 5), y = c(2, 4, 6, 8, 10))
@@ -10,7 +10,7 @@ ggplot(df, aes(x = x, y = y)) +
   geom_point() +
   labs(x = "X-Axis", y = "Y-Axis")
 
-### Example 2 - scatterplot with 4 categorical variables ###
+### Example 2 - scatter plot with 4 categorical variables ###
 
 ## Create an example dataset 
 df1 <- data.frame(
@@ -65,16 +65,10 @@ ggplot(df3, aes(x = Category)) +
   theme_minimal()
 
 ## Remove stacks & have them side by side 
- # merge Value1 and Value2 into a Value column
+merged_df <- df3 %>%
+  pivot_longer(cols = c(Value1, Value2), names_to = "Type", values_to = "Value") # just have 1 value column
 
-
-ggplot(df, aes(x = Category, y = Value, fill = ColorVar)) +
-  geom_bar(stat = "identity", position = "dodge") +
-  labs(x = "Category", y = "Value", fill = "ColorVar", title = "Dodged Barplot with ColorVar") +
-  scale_fill_manual(values = c("Red" = "red", "Green" = "green", "Blue" = "blue", "Yellow" = "yellow")) +
-  theme_minimal()
-
-ggplot(df3, aes(x = Category, y = Value)) +
+ggplot(merged_df, aes(x = Category, y = Value, fill = Type)) +
   geom_bar(stat = "identity", position = "dodge") +
   labs(x = "Category", y = "Value", fill = "Legend") +
   scale_fill_manual(values = c("Value1" = "blue", "Value2" = "red")) +
@@ -82,9 +76,12 @@ ggplot(df3, aes(x = Category, y = Value)) +
 
 ### Example 5 - boxplot ###
 
+example5 <- ggplot(df3, aes(x = Category, y = Value)) +
+  geom_boxplot(stat = "identity", position = "dodge") +
+  labs(x = "Category", y = "Value", fill = "Legend") +
+  scale_fill_manual(values = c("Value1" = "blue", "Value2" = "red")) +
+  theme_minimal()
+example5
+
 ### Save your fave plot(s) for your report
-ggsave("example-barplot.png", plot = barplot, width = 10, height = 6, dpi = 300) # adjust size & resolution
-
-### Example 6 - nMDS ###
-
-#
+ggsave("example5-barplot.png", example5 = barplot, width = 10, height = 6, dpi = 300) # adjust size & resolution
