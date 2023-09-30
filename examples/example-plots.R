@@ -57,31 +57,33 @@ df3 <- data.frame(
 )
 
 ## Create a stacked barplot
-ggplot(df3, aes(x = Category)) +
+example4a <- ggplot(df3, aes(x = Category)) +
   geom_bar(aes(y = Value1, fill = "Value1"), stat = "identity") +
   geom_bar(aes(y = Value2, fill = "Value2"), stat = "identity") +
   labs(x = "Category", y = "Value", fill = "Legend") +
   scale_fill_manual(values = c("Value1" = "blue", "Value2" = "red")) +
   theme_minimal()
+example4a
 
 ## Remove stacks & have them side by side 
 merged_df <- df3 %>%
   pivot_longer(cols = c(Value1, Value2), names_to = "Type", values_to = "Value") # just have 1 value column
 
-ggplot(merged_df, aes(x = Category, y = Value, fill = Type)) +
+example4b <- ggplot(merged_df, aes(x = Category, y = Value, fill = Type)) +
   geom_bar(stat = "identity", position = "dodge") +
   labs(x = "Category", y = "Value", fill = "Legend") +
   scale_fill_manual(values = c("Value1" = "blue", "Value2" = "red")) +
   theme_minimal()
+example4b
 
 ### Example 5 - boxplot ###
-
-example5 <- ggplot(df3, aes(x = Category, y = Value)) +
-  geom_boxplot(stat = "identity", position = "dodge") +
+example5 <- ggplot(merged_df, aes(x = Category, y = Value)) +
+  geom_boxplot() +
   labs(x = "Category", y = "Value", fill = "Legend") +
-  scale_fill_manual(values = c("Value1" = "blue", "Value2" = "red")) +
   theme_minimal()
 example5
 
 ### Save your fave plot(s) for your report
-ggsave("example5-barplot.png", example5 = barplot, width = 10, height = 6, dpi = 300) # adjust size & resolution
+ggsave("example4a-barplot.png", example4a, width = 10, height = 6, dpi = 300) # adjust size & resolution
+ggsave("example4b-barplot.png", example4b, width = 10, height = 6, dpi = 300) # adjust size & resolution
+ggsave("example5-boxplot.png", example5, width = 10, height = 6, dpi = 300) # adjust size & resolution
