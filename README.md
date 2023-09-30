@@ -17,7 +17,7 @@ The "tidepools" and "seagrass" folders include worked examples based on the data
 - Avoid including a figure title (use a figure caption instead)
 - Avoid dark or distracting figure themes (minimal and classic are the most popular)
 ##### Figure captions
-- Make sure figure captions are placed below your figure
+- Make sure figure captions are placed below your figure.
 - Figure captions should be as detailed as possible to allow the reader to understand your figure and data trends without looking at the rest of your text.
 - Depending on your target journal, include summary statstics, p-values and other relevant statistics in your caption.
-- Reiterate what different colours, symbols, categories etc. mean in your figure. 
+- Reiterate what different colours, symbols, categories etc. mean in your figures. 
