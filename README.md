@@ -3,7 +3,7 @@ Within this directory you can find example code for figures and stats that might
 
 There is an "example" folder with different figure examples that have been created using dummy data.
 
-The "tidepools" and "seagrass" folders include worked examples based on the data collected by UCEAP groups in September 2023.
+The "tidepools", "fish" and "seagrass" folders include worked examples based on the data collected by UCEAP groups in September 2023.
 
 ## Plotting advice
 ##### Types of figures
@@ -21,3 +21,5 @@ The "tidepools" and "seagrass" folders include worked examples based on the data
 - Figure captions should be as detailed as possible to allow the reader to understand your figure and data trends without looking at the rest of your text.
 - Depending on your target journal, include summary statstics, p-values and other relevant statistics in your caption.
 - Reiterate what different colours, symbols, categories etc. mean in your figures. 
+## Useful resources 
+https://bookdown.org/kdonovan125/ibis_data_analysis_r4/ 
