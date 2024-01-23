@@ -1,9 +1,15 @@
 ## Introduction
 Within this directory you can find example code for figures and stats that might come in handy for undergraduate coastal ecology projects.
 
-There is an "example" folder with different figure examples that have been created using dummy data.
+I created this as a resource for my students while tutoring the "University of California Study Aboard Program" (UCEAP), which is run by the University of Queensland, Brisbane, Australia.
 
-The "tidepools", "fish" and "seagrass" folders include worked examples based on the data collected by UCEAP groups in September 2023.
+There is an "example" folder with different figure examples that were created using dummy data. The "tidepools", "fish" and "seagrass" folders include worked examples based on the data collected by UCEAP groups in September 2023.
+
+## Directory structure
+Example - folder containing various figures which were created using dummy data.
+Tidepools - folder containing data, analyses and figures relevant to a tidepool project conducted in 2023.
+Fish - folder containing data, analyses and figures relevant to a fish abundance and diversity project conducted in 2023.
+Seagrass - folder containing data, analyses and figures relevant to a seagrass project conducted in 2023.
 
 ## Plotting advice
 ##### Types of figures
